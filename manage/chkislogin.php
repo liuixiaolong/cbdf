@@ -1,0 +1,10 @@
+<?php
+$username='';
+if(!empty($_SESSION['uinfo'])){
+	$username=trim($_SESSION['uinfo']['username']);
+}
+if($username==''){
+	header("Location:index.php");
+	return;
+}
+?>

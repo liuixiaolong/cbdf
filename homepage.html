@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>美涛封面达人秀</title>
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css?v1.3">
+<script type="text/javascript" src="javascript/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="javascript/mobileBUGFix.mini.js" ></script>
+<script type="text/javascript" src="javascript/uploadImage.js" ></script>
+<script type="text/javascript" src="javascript/exif.js" ></script>
+<script type="text/javascript" src="javascript/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="javascript/html2canvas.js"></script>
+<script type="text/javascript" src="javascript/touch-0.2.14.min.js"></script>
+<script type="text/javascript" src="javascript/main.js?v1.1"></script>
+
+</head>
+
+<body>
+
+
+<div id="screenTips" style="display:none;"></div>
+
+<div id="loadingBox" style="display:none;" >
+       <div id="loading" percent='{w:181,h:51}' >
+             <img src="images/loadingImg1.png" width="220" height="220" percent='{w:220,h:220}'>
+             <img src="images/loadingImg2.png" width="220" height="220" percent='{w:220,h:220}' class="loadingAnimate">
+       </div>
+       
+</div>
+
+
+
+<div id="subLoadingBox" style="display:none;" >
+       <div id="subLoading" percent='{w:100,h:60}' >
+       	<div><img src="images/subLoading.gif" width="100" height="20" percent='{w:100,h:20}'></div>
+            <div class="loadingMsg" percent='{lh:30,f:22}' style="width:100%">正在上传</div>
+       
+       </div>
+</div>
+
+
+<!--<div class="msg" style="background:#000;color:#FFF;font-size:14px;padding:10px;position:absolute;left:0px;bottom:0px;z-index:10000;"> </div>
+-->
+<div class="main" style="display:none;" percent='{w:640,h:1008}' >
+      <div class="rulesPage" percent='{w:640,h:1008}' style="display:;" >
+            <img src="images/rules.png" width="100%" >
+            <img src="images/title_rules.png" width="100%"  class="title_rules" >
+            <img src="images/shadow_rules.png" width="100%" class="shadow_rules" percent='{t:154}' >
+            <img src="images/closeBtn_rules.png" width="32" height="32"  percent='{w:32,h:32,r:24,t:80}' class="closeBtn_rules" >
+      </div>
+      
+      
+  <!-- diyPage begin-->
+      
+      <div class="diyPage">
+      	<!-- diyBox begin-->
+      	<div class="diyBox">
+                  <div id="diyPhoto" percent='{w:640,h:1008}' >           	 
+                         <div id="preview1" percent='{w:640}' >
+                                 <img src="images/defaultPic.jpg" width="100%" id="imghead1" >
+                         </div>
+                         
+                         <div class="coversBox" percent='{w:640,h:1008}'>
+                              <div class="cover">
+                                    <img src="images/style1.png" width="100%" >
+                              </div>
+                              
+                              <div class="cover">
+                                    <img src="images/style2.png" width="100%" >
+                              </div>
+      
+                              <div class="cover">
+                                    <img src="images/style3.png" width="100%" >
+                              </div>
+      
+                              <div class="cover" percent='{w:640,h:1008}'>
+                              	<img src="images/style4.png" width="100%" style="position:absolute;" >
+                             	       <div class="smallPhotoContainer"  percent='{w:290,h:290,l:372,t:500}' >
+                                   	      <!--<div id="smallPhotoBox" percent='{w:576,h:907,ml:-166,mt:-200}'>
+                             	       	     <img src="images/defaultPic.jpg" width="100%" id="smallPhoto" >
+                                          </div> -->  
+                                          <canvas id="smallPhotoBox" width="576" height="907" percent='{ml:-166,mt:-200}'  >
+                                          Your browser does not support the HTML5 canvas tag.
+                                          </canvas>
+
+                                          
+                                                                            
+                                     </div>
+                                <img src="images/smallPhotoFrame.png" width="311" height="311" percent='{w:308,h:308,l:362,t:490}'  class="smallPhotoFrame" >
+                           	  	<img src="images/style4_img1.png" width="329" height="130" percent='{w:329,h:130,l:302,t:403}' style="position:absolute" >
+                       		  <img src="images/style4_img2.png" width="176" height="135"  percent='{w:176,h:135,l:310,t:695}' style="position:absolute">
+                              </div>
+      
+                              <div class="cover">
+                                    <img src="images/style5.png" width="100%" >
+                              </div>
+                              
+                              <div class="cover">
+                                    <img src="images/style6.png" width="100%" >
+                              </div>
+                              
+                         </div>
+                              
+                  </div>
+                  
+                   <div id="preview" percent='{w:640}' style="opacity:0;" >
+                           <img src="images/defaultPic.jpg" width="100%" id="imghead" >
+                   </div>
+                  
+                  
+                   <div class="controlTips">
+                        <img src="images/focus.png" width="472" height="617" percent='{w:472,h:617,l:82,t:41}' class="focus" >
+                  	<img src="images/controlTip.png" width="283" height="164" percent='{w:283,h:164,l:180,t:303}' class="controlTip" style="display:none;" >
+                   </div>
+            </div>  
+            <!-- diyBox end-->
+            
+            <!-- step1Bar begin-->
+            <div class="step1Bar" percent='{h:130}' >
+     			<div class="uploadBtn"  percent='{w:136,h:158,t:-50,l:254}' >
+                  	<img src="images/uploadBtn.png" width="136" height="158" percent='{w:136,h:158}' >
+                        <!--<input id="cameraInput" type="file" name="cameraInput" capture="camera" accept="image/*"  value="上传照片"  onchange="selectFileImage(this);" style="opacity:.0;width:100%;height:100%"  />-->                         
+                            <input  id="cameraInput" type="file" name="cameraInput"  value="上传照片"  onchange="selectFileImage(this);" style="opacity:.0;width:100%;height:100%"  />                         
+                  
+                  </div>
+                  
+            </div>  
+            <!-- step1Bar end-->
+            
+            <!-- step2bar begin-->
+            <div class="step2Bar" >
+     			<div class="btns" percent='{h:84}'>
+                  	<div id="reUpload" percent='{w:218,h:50,l:66,t:18}'>
+                           <img src="images/reUploadBtn.png" width="218" height="50" percent='{w:218,h:50}' >
+                        </div>
+                        
+                        <div id="confirmBtn" percent='{w:218,h:50,l:355,t:18}'>
+                           <img src="images/confirmBtn.png" width="218" height="50" percent='{w:218,h:50}' >
+                        </div>
+                        
+                  </div>
+                  
+                  <div class="chooseBar" percent='{h:105,pt:25}' >
+                  	<div class="chooseItem" percent='{w:82,h:82,ml:25}' >
+                        	<img src="images/icon_type1.png" width="100%" >
+                       		<img src="images/iconFrame.png" width="100%" class="iconFrame">
+                        </div>
+                        
+                  	<div class="chooseItem" percent='{w:82,h:82,ml:20}' >
+                        	<img src="images/icon_type2.png" width="100%" >
+                       		<img src="images/iconFrame.png" width="100%" class="iconFrame" >
+                        </div>
+                        
+                  	<div class="chooseItem" percent='{w:82,h:82,ml:20}' >
+                        	<img src="images/icon_type3.png" width="100%" >
+                       		<img src="images/iconFrame.png" width="100%" class="iconFrame" >
+                        </div>
+
+                  	<div class="chooseItem" percent='{w:82,h:82,ml:20}' >
+                        	<img src="images/icon_type4.png" width="100%" >
+                       		<img src="images/iconFrame.png" width="100%" class="iconFrame" >
+                        </div>
+
+                  	<div class="chooseItem" percent='{w:82,h:82,ml:20}' >
+                        	<img src="images/icon_type5.png" width="100%" >
+                       		<img src="images/iconFrame.png" width="100%" class="iconFrame" >
+                        </div>
+
+                  	<div class="chooseItem" percent='{w:82,h:82,ml:20}' >
+                        	<img src="images/icon_type6.png" width="100%" >
+                       		<img src="images/iconFrame.png" width="100%" class="iconFrame" >
+                        </div>
+                        
+              </div>
+                  
+            </div>  
+            <!-- step2bar end-->
+            
+                
+  </div>
+      <!-- diyPage end-->
+      
+      
+      <!-- diyResultPage begin-->
+      <div class="diyResultPage" percent='{w:640,h:1008}'>
+     		 <img src="images/defaultPic.jpg" width="100%" id="diyResultPhoto" >
+             <div class="btns" percent='{b:30}'>
+             	<img src="images/saveImgTip.png" width="273" height="25" percent='{w:273,h:25}'><br>
+	       	<img src="images/shareBtn.png" width="273" height="69" percent='{w:273,h:69,mt:5}' id="rpShareBtn" >
+             </div>
+      </div>
+      <!-- diyResultPage end-->
+      
+      
+      <!-- sharePage begin-->
+      <div class="sharePage" percent='{w:640,h:1008}' style="display:none;">
+        <img src="images/closeBtn_share.png" width="60" height="60" percent='{w:60,h:60,r:20,t:20}' id="closeBtn_share" >
+  		  <div class="cont">
+                    <img src="images/shareTipArrow.png" width="92" height="92" percent='{w:92,h:92,mt:160}'><br>
+                <div percent='{f:22,mt:30}'>点击右上角分享给好友，百万优惠等你拿！</div>
+                    <div class="checkBox checkBoxChoosed" percent='{ml:80,mt:20}'>
+                        <div class="checkBoxIcon fl" percent='{w:70,h:70}' ></div>
+                        <span class="fl" percent='{f:26,pt:25}' >上传至照片墙，加入美涛造型天团！</span>
+                        <div class="clear"></div>
+                    </div>
+              	  
+                <div class="formBox" percent='{h:600,mt:70}'>
+            <div class="formCont" percent='{w:550,pt:25,ml:45}'>
+                             <span percent='{f:20}'>请留下联系方式,<span percent='{f:23}' class="txtColorRed"><b>HOLD</b></span>住更多奖品！</span>
+                             <input name="userName" type="text"  placeholder="姓名" class="userName" id="userName" maxlength="10" percent="{w:508,h:48,f:24,lh:48,pl:20,pr:20,mt:15}" >
+                             <input name="mobile" type="text"  placeholder="手机号码" class="mobile" id="mobile" maxlength="11" percent="{w:508,h:48,f:24,lh:48,pl:20,pr:20,mt:15}" >
+                            <div id="submitBtn" percent="{w:548,h:50,f:24,lh:48,mt:90}">提交</div>
+                            <img src="images/guanzhuBtn.png" width="292" height="53" percent="{w:292,h:53,mt:70,ml:128}" id="guanzhuBtn" >
+                   </div>
+                   
+                </div>
+              
+              </div>
+      </div>
+      <!-- sharePage end-->
+      
+      <!-- galleryPage begin-->
+      <div class="galleryPage" percent='{w:640,h:1008}' style="display:none;" > 
+      	<a href="#" id="coupon" ><img src="images/coupon.png" width="100%"></a>
+            <div id="galleryBox" >
+                 <div id="galleryList" percent='{w:640,h:1008}'>
+                 	 <div class="thumb" percent='{w:212,h:284,mr:2,mb:2}' >
+                            <img src="images/thumb.jpg" width="100%" class="pic" > 
+                            <img src="images/thumbItemShadow.png" width="100%" class="shadow" >
+                            <div class="likeNum" percent='{h:33,l:10,b:5}'>
+                              <img src="images/likeIcon.png" height="100%" class="fl">
+                              <span class="num fl" percent='{f:28,mt:-5}'>1,452</span>
+                            </div>
+                   </div>
+                 
+                 </div>
+            </div>
+     		<img src="images/galleryBottom.png" width="100%" class="galleryBottom" >
+      </div>      
+      <!-- galleryPage end-->
+      
+      
+      
+      
+      
+</div>
+
+
+<script>
+
+
+
+	var loadingTimer;
+	var site = {
+		_init:function(){
+		$('#loadingBox').fadeOut(600);
+		$(".main").css({"display":"block"});
+		ready();
+		
+		}   
+	};
+	
+	readyLoading(); 
+	
+	document.onreadystatechange = function(){
+	    if(document.readyState=="complete"){
+		    site._init(); 
+		}
+	} 
+
+
+
+</script>
+
+
+<!--<div style="display:none;">
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9c2c7011de90247e5059bc7023c2d388";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+_hmt.push(['_trackPageview',"homepage?sfrom="+_sfrom]);
+trackEvent( 'visit', 'visit homepage', 'hp-sfrom-'+_sfrom);
+
+</script>
+
+
+</div>-->
+
+
+</body>
+
+
+
+
+</html>

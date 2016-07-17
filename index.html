@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>美涛封面达人秀</title>
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<link rel="stylesheet" href="css/style.css?v1.3">
+<link rel="stylesheet" href="css/animation.css?v1.3">
+<script type="text/javascript" src="javascript/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="javascript/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="javascript/html2canvas.js"></script>
+<script type="text/javascript" src="javascript/main.js?v1.0"></script>
+
+</head>
+
+<body>
+
+<div id="screenTips" style="display:none;"></div>
+
+<div id="loadingBox" style="display:none;" >
+       <div id="loading" percent='{w:181,h:51}' >
+             <img src="images/loadingImg1.png" width="220" height="220" percent='{w:220,h:220}'>
+             <img src="images/loadingImg2.png" width="220" height="220" percent='{w:220,h:220}' class="loadingAnimate">
+       </div>
+       
+</div>
+
+
+
+<div class="main" style="display:none;" percent='{w:640,h:1008}' >
+<img src="images/ldPage.jpg" width="100%" >
+<a href="homepage.html?page=rules"  percent='{w:78,h:77,l:547,t:24}' class="rulesBtn" ><img src="images/rulesBtn.png" width="78" height="77"  percent='{w:78,h:77}' ></a>
+<a href="homepage.html?page=diy" percent='{w:326,h:69,l:141,t:891}' class="joinBtn"  ><img src="images/ld_joinBtn.png" width="326" height="69" percent='{w:326,h:69}'></a>
+<a href="homepage.html?page=gallery" percent='{w:87,h:74,l:499,t:891}' class="galleryBtn" ><img src="images/ld_galleryBtn.png" width="87" height="74" percent='{w:87,h:74}'></a>
+
+</div>
+
+
+<script>
+
+
+
+var loadingTimer;
+var site = {
+	_init:function(){
+	$('#loadingBox').fadeOut(600);
+	$(".main").css({"display":"block"});
+	ready();
+	
+	
+	}   
+};
+
+readyLoading(); 
+
+document.onreadystatechange = function(){
+    if(document.readyState=="complete"){
+	    site._init(); 
+	}
+} 
+
+
+
+</script>
+
+
+<!--<div style="display:none;">
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9c2c7011de90247e5059bc7023c2d388";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+_hmt.push(['_trackPageview',"homepage?sfrom="+_sfrom]);
+trackEvent( 'visit', 'visit homepage', 'hp-sfrom-'+_sfrom);
+
+</script>
+
+
+</div>-->
+
+
+</body>
+
+
+
+
+</html>
